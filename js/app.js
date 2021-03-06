@@ -24,6 +24,10 @@ function lockLandscape(){
 function setFullScreen(s_fullscreen){    
     fullScreen = s_fullscreen;    
 }
+
+function getFullScreen(){
+    return fullscreen;
+}
   
 function setFullScreen_mode(){        
     if(fullScreen){
