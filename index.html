@@ -1,507 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">    
-    <!-- <link rel="stylesheet" href="css/regular.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/solid.min.css">
-    <link rel="stylesheet" href="css/brands.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">         -->
-    <title>Edu Games 1</title>
-</head>
-<body style="overflow: auto;">        
-    <div id="container" class="container">        
-        <div class="card-custom row thinkers-sortable">
-            <div class="col-md-12" id="nav_menu">             
-                <div class="d-flex mb-2">         
-                    <div class="ms-auto">                                 
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menu"><span class="fa fa-pause"></span></button> 
-                    </div>                      
-                  </div>                                                 
-            </div>            
-            <div class="col-md-12" id="coba">                
-                <ul id="response_drop" class="d-flex">                          
-                    <li id="done" class="align-self-center" style="width : 100%">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success btn-lg" data-bs-target="#result_score" data-bs-toggle="modal">Selesai</button>
-                        </div>                                       
-                    </li>              
-                    <li class="right-chevron">
-                        <button class="chevron-response-drop" id="right_relation_drop">
-                            <span class="fa fa-chevron-right"></span>
-                        </button>
-                    </li>
-                    <li class="left-chevron">
-                        <button class="chevron-response-drop" id="left_relation_drop">
-                            <span class="fa fa-chevron-left"></span>
-                        </button>
-                    </li>
-                    <li class="response_drag" data-id="1">
-                        <div class="box-response">
-                            <img src="img/pilot.png" alt="">
-                            <p>Pilot</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="2">
-                        <div class="box-response">
-                            <img src="img/captain2.png" alt="">
-                            <p>Nahkoda</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="3">
-                        <div class="box-response">
-                            <img src="img/teacher.png" alt="">
-                            <p>Guru</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="4">
-                        <div class="box-response">
-                            <img src="img/machinist.png" alt="">
-                            <p>Masinis</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="5">
-                        <div class="box-response">
-                            <img src="img/farmer.png" alt="">
-                            <p>Petani</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="6">
-                        <div class="box-response">
-                            <img src="img/firefighter.png" alt="">
-                            <p>Pemadam Kebakaran</p>
-                        </div> 
-                    </li>   
-                    <li class="response_drag" data-id="7">
-                        <div class="box-response">
-                            <img src="img/doctor.png" alt="">
-                            <p>Dokter</p>
-                        </div> 
-                    </li>                                     
-                    <li class="response_drag" data-id="8">
-                        <div class="box-response">
-                            <img src="img/police.png" alt="">
-                            <p>Polisi</p>
-                        </div> 
-                    </li>                                                                       
-                </ul>        
-            </div>            
-            <div class="col-md-12 relation">
-                <ul id="relation_drop" class="row">                   
-                    <li class="col-lg-3" data-id="1">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Edu Games</title>
+  </head>
+  <body class="overflow-auto">
+    <div class="container-fluid bg-primary position-relative">
+      <div
+        class="row justify-content-center align-items-center min-vh-100 bg-custom"
+      >
+        <div class="col-3 text-center">
+          <h1
+            class="mb-5 display-1 fw-bold text-white"
+            style="background-color: rgba(0, 0, 0, 0.4)"
+          >
+            PROFESIKU
+          </h1>
+          <br />
+          <a
+            href="view/level1.html"
+            class="display-5 d-block text-decoration-none bg-success border border-3 border-white rounded-pill my-4 btn-custom"
+          >
+            MAIN
+          </a>
+          <a
+            class="display-5 d-block text-decoration-none bg-success border border-3 border-white rounded-pill my-4 btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            CARA BERMAIN
+          </a>
+        </div>
+      </div>
+      <div class="position-absolute top-0 end-0">
+        <p class="m-4">
+          <i
+            class="fas fa-expand display-6 me-3 btn-fullscreen pointer"
+            title="FULLSCREEN"
+          ></i>
 
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/plane.png" alt="">
-                                <p>Pesawat</p>
-                            </div>      
-                        </div>       
-                    </li>
-                    <li class="col-lg-3" data-id="2">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
+          <i
+            class="fas fa-volume-up display-6 btn-music pointer"
+            title="MUTE"
+          ></i>
+          <br />
+          <audio
+            autoplay
+            src="audio/Semata Karenamu (192 kbps).mp3"
+            hidden
+            loop
+            class="audio-play"
+          ></audio>
+        </p>
+      </div>
+    </div>
 
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/ferry-boat.png" alt="">
-                                <p>Kapal Laut</p>
-                            </div>      
-                        </div>       
-                    </li>
-                    <li class="col-lg-3" data-id="3">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-                                
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/school.png" alt="">
-                                <p>Sekolah</p>
-                            </div>      
-                        </div>                          
-                     </li>
-                    <li class="col-lg-3" data-id="4">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/train.png" alt="">
-                                <p>Kereta</p>
-                            </div>      
-                        </div>       
-                    </li> 
-                    <li class="col-lg-3" data-id="5">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/field.png" alt="">
-                                <p>Kebun</p>
-                            </div>      
-                        </div>       
-                    </li>
-                    <li class="col-lg-3" data-id="6">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/fire-station (2).png" alt="">
-                                <p class="">Kantor Pemadam</p>
-                            </div>      
-                        </div>       
-                    </li>
-                    <li class="col-lg-3" data-id="7">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/hospital.png" alt="">
-                                <p>Rumah Sakit</p>
-                            </div>      
-                        </div>       
-                    </li>
-                    <li class="col-lg-3" data-id="8">                 
-                        <div class="box-equation">
-                            <div class="toggle_sortable">
-
-                            </div>                  
-                            <div class="box-relation">
-                                <img src="img/police-station (1).png" alt="">
-                                <p>Kantor Polisi</p>
-                            </div>      
-                        </div>       
-                    </li>                                                                           
-                </ul>        
-            </div>                                             
-        </div>     
-        <div class="restore-screen">
-            <button type="button" class="btn btn-primary" id="exit_fullscreen"><span class="fas fa-compress"></span></button>
-        </div>            
-    </div>    
-    <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Pause</h5>              
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-success" data-bs-dismiss="modal">
-                                <span class="fa fa-play" ></span>
-                            </button>
-                        </div> 
-                        <div class="col">
-                            <button class="btn btn-success" id="reload">
-                                <span class="fa fa-redo-alt"></span>
-                            </button>                    
-                        </div>                           
-                        <div class="col">
-                            <button class="btn btn-success" id="fullscreen">
-                                <span class="fas fa-expand"></span>
-                            </button>
-                        </div>       
-                        <div class="col">
-                            <button class="btn btn-danger" id="exit">
-                                <span class="fa fa-times"></span>
-                            </button>   
-                        </div>                                             
-                </div>                
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              CARA BERMAIN
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="true"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/captain.png"
+                    class="d-block w-75 mx-auto"
+                    alt="Slide 1"
+                  />
                 </div>
-            </div>            
+                <div class="carousel-item">
+                  <img
+                    src="/img/captain2.png"
+                    class="d-block w-75 mx-auto"
+                    alt="Slide 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/fire-station (1).png"
+                    class="d-block w-75 mx-auto"
+                    alt="Slide 3"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              KEMBALI
+            </button>
           </div>
         </div>
       </div>
-
-      <div class="modal fade" id="result_score" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Score</h5>              
-            </div>
-            <div class="modal-body">     
-                <div class="d-flex">
-                    <p class="card-text">Betul : </p> <p class="card-text" id="show_result"> </p><p class="card-text"> dari 8</p>
-                </div>                         
-            </div>
-            <div class="modal-footer">              
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
-            </div>
-          </div>
-        </div>
-      </div>      
+    </div>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>    
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/jquery.fullscreen.min.js"></script>
     <!-- <script src="js/lock-orientation-landscape.js"></script> -->
-    <script src="https://kit.fontawesome.com/5e28bc552a.js" crossorigin="anonymous"></script>    
-    <script src="js/app.js"></script>        
-    <script>        
-    var indexUI = {
-        'response' : [1, 2, 3, 4, 5, 6, 7, 8],
-        'relation' : [],        
-    };             
-    // [[1], [2], [6], [7], [8], [3], [5], [4]]     
-    
-    var answer = [];
-
-    var relation = []
-    pushRelation();
-    function pushRelation(){
-        for (const item of $('#relation_drop > li')) {        
-        relation.push({
-            'id' : $(item).data('id'),
-            'img' : $(item).find('img').attr('src'),
-            'text' : $(item).find('p').text()
-        })
-        }        
-    }    
-
-    
-     $('#done').hide();        
-    var dragResponse = false;         
-    
-    var getContainer = $('#container').html();
-
-    function appendRelation(id, img, text){
-        return '<li class="col-lg-3" data-id="'+id+'">'+
-            '<div class="box-equation">'+
-                '<div class="toggle_sortable">'+
-        '        </div>                  '+
-        '        <div class="box-relation">'+
-        '            <img src="'+img+'" alt="">'+
-        '            <p>'+text+'</p>'+
-        '        </div>      '+
-        '    </div>       '+
-        '</li>';
-    }
-    
-    randomGame();      
-    
-    function randomGame(){    
-    var answer = [];                               
-    $('#relation_drop').empty();                 
-        for (let i = 0; i < 8; i++) {       
-            var pickRandom = Math.floor(Math.random() * 8) + 1;                                          
-            while(answer.indexOf(pickRandom) > -1){
-                pickRandom = Math.floor(Math.random() * 8) + 1;                                    
-            }            
-
-            answer.push(pickRandom);
-            
-            // console.log(pickRandom);
-            var arr_relation = relation[pickRandom - 1];            
-
-            this.answer[i] = [pickRandom];      
-            // defaultContent.answer[i] = [pickRandom]
-                   
-            
-            // console.log(relation[pickRandom]);            
-
-            $('#relation_drop').append(appendRelation(arr_relation.id, arr_relation.img, arr_relation.text))
-        }                        
-    }   
-         
-    
-
-    lockLandscape();    
-    setTimeout(() => {                
-        setFullScreen_mode();
-    })   
-
-    function fullscreen_mode(){        
-        $('#nav_menu').hide();        
-        $('body').css('overflow', 'hidden')
-        $('.restore-screen').show();         
-    }
-
-    $('#fullscreen').click(() => {
-        $('html').fullscreen();                            
-        fullscreen_mode();
-        $('#menu').modal('hide');
-        return false;
-    });    
-
-    $('#exit_fullscreen').click(() => {
-        $.fullscreen.exit();   
-        $('body').css('overflow', 'auto')
-        $('#nav_menu').show();        
-        $('.restore-screen').hide();
-        return false;
-    });
-
-    $('#reload').click(function(){
-        $('#container').html(getContainer);
-        indexUI.response = [1, 2, 3, 4, 5, 6, 7, 8];
-        indexUI.relation = [];    
-        randomGame();   
-        $('#menu').modal('hide');                         
-    });         
-    
-    if(window.innerWidth <= 1240){
-        $('#response_drop > .response_drag').draggable({            
-        appendTo : 'body',
-        // containment: 'window',
-        helper: 'clone',
-        scroll : false,     
-        revert : "invalid",        
-        // drag : function(e, ui){
-        //     console.log('drag');                               
-        // },        
-        start : function(e, ui){
-            $('#done').hide()      
-            if(window.innerWidth <= 1240)  {
-                $(ui.helper).css({                    
-                    'list-style-type': 'none',
-                    'color': 'black',
-                    'border-radius': '5px',
-                    'text-align':' center',
-                    'padding': '10px',
-                    'height': 'min-content',                    
-                })
-
-                $(ui.helper).find('.box-response > img').css({
-                    'width' : '100%'
-                })
-               
-                $(ui.helper).find('.box-response > p').css({
-                    'margin-top': '10px',
-                    'width' : '62px',
-                    'border-top': '1px solid #aeb1b8'
-                })
-            }                                                            
-        },
-        stop : function(e, ui){
-            checkResponseDrop()
-        },              
-        drag : function(e, ui){
-            // console.log(ui);            
+    <script
+      src="https://kit.fontawesome.com/5e28bc552a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+    <script>
+      window.$('.btn-music').click(function () {
+        if ($(this).hasClass('fa-volume-up')) {
+          $(this).removeClass('fa-volume-up');
+          $(this).addClass('fa-volume-mute');
+          $(this)[0].title = 'SUARA';
+          $('.audio-play')[0].muted = true;
+        } else {
+          $(this).removeClass('fa-volume-mute');
+          $(this).addClass('fa-volume-up');
+          $(this)[0].title = 'MUTE';
+          $('.audio-play')[0].muted = false;
         }
-    });        
-    }else{
-        $('#response_drop > .response_drag').draggable({                
-        scroll : false,                     
-        revert : "invalid",        
-        // drag : function(e, ui){
-        //     console.log('drag');                               
-        // },        
-        start : function(e, ui){
-            $('#done').hide()                                    
-        },
-        stop : function(e, ui){
-            checkResponseDrop()
-        },              
-        drag : function(e, ui){
-            // console.log(ui);            
-        }
-    });        
-    }    
-    
-    
-    
-    function checkResponseDrop(){
-        !!indexUI.response.length ? $('#done').hide() : $('#done').show();    
-        // console.log(!!indexUI.response.length);
-    }
-   
+      });
 
-    $('#response_drop').droppable({               
-        classes: {
-            "ui-droppable-active": "ui-state-active",
-            "ui-droppable-hover": "ui-state-hover"
-        },
-        drop : function(e, ui){
-        var dropped = ui.draggable;
-		var droppedOn = $(this);
-        console.log(indexUI.response.indexOf($(dropped).data('id')));
-        if(indexUI.response.indexOf($(dropped).data('id')) == -1){
-            $(dropped).detach().css({top: 0,left: 0, padding : 10}).appendTo(droppedOn);        
-            $(dropped).find('.box-response').css({padding : 10});            
-            indexUI.relation.splice(indexUI.response.indexOf($(dropped).data('id')), 1);
-            indexUI.response.push($(dropped).data('id'));
-        }else{            
-            $(dropped).css({top: 0,left: 0, padding : 10});        
-        }  
-        removeAccept();              
-      }
-    }); 
-    
-    function removeFindAnswer(id){
-        for (const x of answer) {
-            if(x[1] == id){
-                x.splice(1,1);
-            }
+      window.$('.btn-fullscreen').click(function () {
+        if ($(this).hasClass('fa-expand')) {
+          $(this).removeClass('fa-expand');
+          $(this).addClass('fa-compress');
+          $(this)[0].title = 'TUTUP FULLSCREEN';
+          document.documentElement.requestFullscreen();
+        } else {
+          $(this).removeClass('fa-compress');
+          $(this).addClass('fa-expand');
+          $(this)[0].title = 'FULLSCREEN';
+          document.exitFullscreen();
         }
-    }
-    
-    function removeAccept(){
-        // $(this).droppable({accept : '.response_drag'});   
-        for (const item of $('#relation_drop').find('.toggle_sortable')) {
-            if($(item).has('li').length > 0){                
-                continue;
-            }
-            $(item).droppable({accept : '.response_drag'})            
-        }
-    }
-    
-   
-    $('#relation_drop').find('.toggle_sortable').droppable({                      
-        classes: {        
-        "ui-droppable-hover": "ui-state-hover"
-      },         
-      drop : function(e, ui){        
-        var dropped = ui.draggable;
-		var droppedOn = $(this);                
-        var droppedIndex = $('#relation_drop').find('.toggle_sortable').index(this);                                                                                     
-		$(dropped).detach().css({top: 0,left: 0, padding : 0}).appendTo(droppedOn);
-        $(dropped).find('.box-response').css({margin : 0, padding : 5});
-        $(dropped).find('.box-response > p').css({'margin': '10px 5px 5px 5px'});
-        $(this).droppable({accept : ''});    
-        if(window.innerWidth <= 1366){
-            $(dropped).find('.box-response > p').css({'margin': '10px 0 0 0'});
-        }
-        if(window.innerWidth <= 568){
-            $(dropped).find('.box-response > p').css({marginTop : 5});
-        }                
-        removeFindAnswer($(dropped).data('id'));
-        answer[droppedIndex].push($(dropped).data('id'));
-        if(indexUI.response.indexOf($(dropped).data('id')) > -1){            
-            indexUI.response.splice(indexUI.response.indexOf($(dropped).data('id')), 1);
-            indexUI.relation.push($(dropped).data('id'));            
-        }        
-        checkResponseDrop();
-        setResult();
-        removeAccept();
-      }
-    });
-
-    function countResult(){      
-        var result = 0;          
-        for (const item of answer) {
-            if(item[0] == item[1]){
-                result++;
-            }
-        }        
-        return result;
-    }
-
-    function setResult(){
-        $('#show_result').text(' '+countResult()+' ');
-    }
-            
+      });
     </script>
-</body>
+  </body>
 </html>
