@@ -21,12 +21,7 @@
         <div class="col-md-12" id="nav_menu">
           <div class="d-flex mb-2">
             <div class="ms-auto">
-              <button
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#menu"
-                id="trigger-menu"
-              >
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menu" id="trigger-menu">
                 <span class="fa fa-pause"></span>
               </button>
             </div>
@@ -36,14 +31,7 @@
           <ul id="response_drop" class="d-flex">
             <li id="done" class="align-self-center" style="width: 100%">
               <div class="d-flex justify-content-end">
-                <button
-                  class="btn btn-success btn-lg"
-                  data-bs-target="#result_score"
-                  data-bs-toggle="modal"
-                  id="selesai"
-                >
-                  Selesai
-                </button>
+                <button class="btn btn-success btn-lg" data-bs-target="#result_score" data-bs-toggle="modal" id="selesai">Selesai</button>
               </div>
             </li>
             <li class="right-chevron">
@@ -94,12 +82,7 @@
               <div class="box-equation-level2">
                 <div class="toggle_sortable"></div>
                 <div class="box-relation">
-                  <img
-                    src="../img/teacher2-task.png"
-                    alt=""
-                    class="min-vh-100"
-                    height="1000"
-                  />
+                  <img src="../img/teacher2-task.png" alt="" class="min-vh-100" height="1000" />
                   <!-- <p>Pesawat</p> -->
                 </div>
               </div>
@@ -149,14 +132,8 @@
         </button>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="menu"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-sm">
+    <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Pause</h5>
@@ -164,28 +141,29 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class="col">
-                  <button
-                    class="btn btn-success"
-                    data-bs-dismiss="modal"
-                    id="resume"
-                  >
+                <div class="col text-center">
+                  <button class="btn btn-success" data-bs-dismiss="modal" id="resume">
                     <span class="fa fa-play"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-success" id="reload">
                     <span class="fa fa-redo-alt"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-success" id="fullscreen">
                     <span class="fas fa-expand"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-danger" id="exit">
                     <span class="fa fa-times"></span>
+                  </button>
+                </div>
+                <div class="col text-center">
+                  <button class="btn btn-primary" id="home">
+                    <span class="fa fa-home"></span>
                   </button>
                 </div>
               </div>
@@ -195,13 +173,7 @@
       </div>
     </div>
 
-    <div
-      class="modal fade"
-      id="result_score"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="result_score" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -212,36 +184,26 @@
               <div class="lose-lvl">
                 <h3>Yah Kamu Kalah</h3>
                 <h3>Ayo Semangat!</h3>
-              </div>              
-              <img class="lose-lvl" src="../img/lose.gif" alt="">
-            </div>            
-            <div class="d-flex">              
+              </div>
+              <img class="lose-lvl" src="../img/lose.gif" alt="" />
+            </div>
+            <div class="d-flex">
               <div class="win-lvl">
                 <h3>Selamat Kamu Telah Menyelesaikan Level Ini</h3>
-                <h3>Ayo Semangat!</h3>              
-              </div>              
-              <img class="win-lvl" src="../img/gift.gif" alt="" width="200">
-            </div>            
+                <h3>Ayo Semangat!</h3>
+              </div>
+              <img class="win-lvl" src="../img/gift.gif" alt="" width="200" />
+            </div>
             <div class="d-flex">
-              <p class="card-text">
-                Betul : <span id="show_result"></span> dari 5
-              </p>
+              <p class="card-text">Betul : <span id="show_result"></span> dari 5</p>
             </div>
           </div>
           <div class="modal-footer">
             <a href="./level3.html">
-              <button type="button" class="btn btn-success next-lvl">
-                Level Selanjutnya
-              </button>
+              <button type="button" class="btn btn-success next-lvl">Level Selanjutnya</button>
             </a>
             <button type="button" class="btn btn-warning repeat-lvl" id="repeat">Ulangi Lagi</button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              Ok
-            </button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
           </div>
         </div>
       </div>
@@ -252,10 +214,7 @@
     <script src="../js/jquery.ui.touch-punch.min.js"></script>
     <script src="../js/jquery.fullscreen.min.js"></script>
     <!-- <script src="../js/lock-orientation-landscape.js"></script> -->
-    <script
-      src="https://kit.fontawesome.com/5e28bc552a.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/5e28bc552a.js" crossorigin="anonymous"></script>
     <script src="../js/app.js"></script>
     <script>
       var indexUI = {
@@ -326,9 +285,7 @@
 
           // console.log(relation[pickRandom]);
 
-          $('#relation_drop').append(
-            appendRelation(arr_relation.id, arr_relation.img, arr_relation.text)
-          );
+          $('#relation_drop').append(appendRelation(arr_relation.id, arr_relation.img, arr_relation.text));
         }
       }
 
@@ -373,7 +330,15 @@
         audio.play();
       });
 
-      function reload(){
+      $('#home').click(function () {
+        audio.src = '../audio/mouserelease1.ogg';
+        audio.play();
+        window.setTimeout(() => {
+          window.location.href = '../index.html';
+        }, 1000);
+      });
+
+      function reload() {
         $('#container').html(getContainer);
         indexUI.response = [1, 2, 3, 4, 5];
         indexUI.relation = [];
@@ -386,15 +351,14 @@
         }, 1000);
       }
 
-      $('#reload').click(function () {        
-        reload()
+      $('#reload').click(function () {
+        reload();
       });
 
-      $('#repeat').click(function () {        
-        reload()
-        $('#result_score').modal('hide')
+      $('#repeat').click(function () {
+        reload();
+        $('#result_score').modal('hide');
       });
-      
 
       $('#trigger-menu').click(function () {
         //document.getElementById('container').append(audio);
@@ -405,16 +369,16 @@
       $('#selesai').click(function () {
         if (countResult() == answer.length) {
           audio.src = '../audio/yay-6120.mp3';
-          $('.repeat-lvl').hide();          
-          $('.next-lvl').show();          
+          $('.repeat-lvl').hide();
+          $('.next-lvl').show();
           $('.lose-lvl').hide();
-          $('.win-lvl').show();    
+          $('.win-lvl').show();
         } else {
           audio.src = '../audio/negative_beeps-6008.mp3';
           $('.next-lvl').hide();
-          $('.win-lvl').hide();    
-          $('.repeat-lvl').show();      
-          $('.lose-lvl').show();          
+          $('.win-lvl').hide();
+          $('.repeat-lvl').show();
+          $('.lose-lvl').show();
         }
         audio.play();
       });
@@ -493,15 +457,9 @@
           var droppedOn = $(this);
           console.log(indexUI.response.indexOf($(dropped).data('id')));
           if (indexUI.response.indexOf($(dropped).data('id')) == -1) {
-            $(dropped)
-              .detach()
-              .css({ top: 0, left: 0, padding: 10 })
-              .appendTo(droppedOn);
+            $(dropped).detach().css({ top: 0, left: 0, padding: 10 }).appendTo(droppedOn);
             $(dropped).find('.box-response').css({ padding: 10 });
-            indexUI.relation.splice(
-              indexUI.response.indexOf($(dropped).data('id')),
-              1
-            );
+            indexUI.relation.splice(indexUI.response.indexOf($(dropped).data('id')), 1);
             indexUI.response.push($(dropped).data('id'));
           } else {
             $(dropped).css({ top: 0, left: 0, padding: 10 });
@@ -537,22 +495,13 @@
           drop: function (e, ui) {
             var dropped = ui.draggable;
             var droppedOn = $(this);
-            var droppedIndex = $('#relation_drop')
-              .find('.toggle_sortable')
-              .index(this);
-            $(dropped)
-              .detach()
-              .css({ top: 0, left: 0, padding: 0 })
-              .appendTo(droppedOn);
+            var droppedIndex = $('#relation_drop').find('.toggle_sortable').index(this);
+            $(dropped).detach().css({ top: 0, left: 0, padding: 0 }).appendTo(droppedOn);
             $(dropped).find('.box-response').css({ margin: 0, padding: 5 });
-            $(dropped)
-              .find('.box-response > p')
-              .css({ margin: '10px 5px 5px 5px' });
+            $(dropped).find('.box-response > p').css({ margin: '10px 5px 5px 5px' });
             $(this).droppable({ accept: '' });
             if (window.innerWidth <= 1366) {
-              $(dropped)
-                .find('.box-response > p')
-                .css({ margin: '10px 0 0 0' });
+              $(dropped).find('.box-response > p').css({ margin: '10px 0 0 0' });
             }
             if (window.innerWidth <= 568) {
               $(dropped).find('.box-response > p').css({ marginTop: 5 });
@@ -560,10 +509,7 @@
             removeFindAnswer($(dropped).data('id'));
             answer[droppedIndex].push($(dropped).data('id'));
             if (indexUI.response.indexOf($(dropped).data('id')) > -1) {
-              indexUI.response.splice(
-                indexUI.response.indexOf($(dropped).data('id')),
-                1
-              );
+              indexUI.response.splice(indexUI.response.indexOf($(dropped).data('id')), 1);
               indexUI.relation.push($(dropped).data('id'));
             }
             checkResponseDrop();
