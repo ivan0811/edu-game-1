@@ -178,7 +178,7 @@
       </div>
     </div>
     <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Pause</h5>
@@ -186,24 +186,29 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-success" data-bs-dismiss="modal" id="resume">
                     <span class="fa fa-play"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-success" id="reload">
                     <span class="fa fa-redo-alt"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-success" id="fullscreen">
                     <span class="fas fa-expand"></span>
                   </button>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                   <button class="btn btn-danger" id="exit">
                     <span class="fa fa-times"></span>
+                  </button>
+                </div>
+                <div class="col text-center">
+                  <button class="btn btn-primary" id="home">
+                    <span class="fa fa-home"></span>
                   </button>
                 </div>
               </div>
@@ -386,6 +391,14 @@
           $('.next-lvl').hide();
         }
         audio.play();
+      });
+
+      $('#home').click(function () {
+        audio.src = '../audio/mouserelease1.ogg';
+        audio.play();
+        window.setTimeout(() => {
+          window.location.href = '../index.html';
+        }, 1000);
       });
 
       if (window.innerWidth <= 1240) {
