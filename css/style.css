@@ -55,6 +55,14 @@ div.toggle_sortable.ui-state-hover {
   border-radius: 10px;
 }
 
+.box-equation-level2 {
+  display: grid;
+  grid-template-columns: auto 75%;
+  border: solid 1px #aeb1b8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .box-relation {
   border: solid 2px #aeb1b8;
   background-color: white;
