@@ -226,15 +226,31 @@
           </div>
           <div class="modal-body">
             <div class="d-flex">
+              <div class="lose-lvl">
+                <h3>Yah Kamu Kalah</h3>
+                <h3>Ayo Semangat!</h3>
+              </div>              
+              <img class="lose-lvl" src="../img/lose.gif" alt="">
+            </div>            
+            <div class="d-flex">              
+              <div class="win-lvl">
+                <h3>Selamat Kamu Telah Menyelesaikan Level Ini</h3>
+                <h3>Ayo Semangat!</h3>              
+              </div>              
+              <img class="win-lvl" src="../img/popper.gif" alt="" width="200">
+            </div>            
+            <div class="d-flex">              
               <p class="card-text">Betul :&nbsp;</p>
               <p class="card-text" id="show_result"></p>
               <p class="card-text">&nbsp;dari 8</p>
+              <p></p>
             </div>
           </div>
           <div class="modal-footer">
             <a href="./level2.html">
               <button type="button" class="btn btn-success next-lvl">Level Selanjutnya</button>
-            </a>
+            </a>            
+            <button type="button" class="btn btn-warning repeat-lvl" id="repeat">Ulangi Lagi</button>            
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
           </div>
         </div>
@@ -363,7 +379,7 @@
         audio.play();
       });
 
-      $('#reload').click(function () {
+      function reload(){
         $('#container').html(getContainer);
         indexUI.response = [1, 2, 3, 4, 5, 6, 7, 8];
         indexUI.relation = [];
@@ -374,6 +390,15 @@
         window.setTimeout(() => {
           location.reload();
         }, 1000);
+      }
+
+      $('#reload').click(function () {        
+        reload()
+      });
+
+      $('#repeat').click(function () {        
+        reload()
+        $('#result_score').modal('hide')
       });
 
       $('#trigger-menu').click(function () {
@@ -385,10 +410,16 @@
       $('#selesai').click(function () {
         if (countResult() == answer.length) {
           audio.src = '../audio/yay-6120.mp3';
-          $('.next-lvl').show();
+          $('.repeat-lvl').hide();          
+          $('.next-lvl').show();          
+          $('.lose-lvl').hide();
+          $('.win-lvl').show();    
         } else {
           audio.src = '../audio/negative_beeps-6008.mp3';
           $('.next-lvl').hide();
+          $('.win-lvl').hide();    
+          $('.repeat-lvl').show();      
+          $('.lose-lvl').show();          
         }
         audio.play();
       });
