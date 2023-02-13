@@ -1,0 +1,462 @@
+body {
+  overflow: scroll;
+  background-color: white;
+  height: 100%;
+}
+
+.card-custom {
+  margin-top: 10px;
+}
+
+.put-sortable {
+  background-color: aqua;
+}
+
+.thinkers-sortable ul {
+  height: 100%;
+}
+
+.thinkers-sortable ul li {
+  list-style-type: none;
+  /* background-color: white; */
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+div.toggle_sortable {
+  border: 3px dashed #aeb1b8;
+  margin-right: 6px;
+  background-color: #e2e5ec;
+  border-radius: 5px;
+  width: 124px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: 185px;
+}
+
+div.toggle_sortable.ui-state-hover {
+  border: 5px dashed #aeb1b8;
+  margin-right: 0px;
+  background-color: #e2e5ec;
+  border-radius: 5px;
+  width: 130px;
+  height: 190px;
+  margin-bottom: 0px;
+  transition: 0.1s;
+}
+
+.box-equation {
+  display: grid;
+  grid-template-columns: auto auto;
+  border: solid 1px #aeb1b8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.box-equation-level2 {
+  display: grid;
+  grid-template-columns: auto 75%;
+  border: solid 1px #aeb1b8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.box-relation {
+  border: solid 2px #aeb1b8;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  height: 185px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.thinkers-sortable ul li img {
+  width: 100px;
+  /* height: 50px; */
+}
+
+.thinkers-sortable ul#relation_drop li p {
+  margin: 10px;
+  border-top: 1px solid #aeb1b8;
+  width: 100px;
+}
+
+.box-response > p {
+  margin: 10px;
+  border-top: 1px solid #aeb1b8;
+  /* width: 100px;        */
+}
+
+.box-drag {
+  background-color: rgb(5, 5, 5);
+}
+
+.box-drag > p {
+  margin: 0;
+}
+
+#response_drop {
+  height: 200px;
+}
+
+#response_drop.ui-state-hover {
+  background-color: #aeb1b8;
+  border-radius: 5px;
+}
+
+.box-response {
+  border: solid 2px #aeb1b8;
+  background-color: white;
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  width: 124px;
+  height: 183px;
+}
+
+.thinkers-sortable li.left-chevron {
+  display: none;
+}
+
+.thinkers-sortable li.right-chevron {
+  display: none;
+}
+
+.restore-screen {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media (max-width: 1366px) and (orientation: landscape) {
+  #response_drop {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .response-drag {
+    list-style-type: none;
+    /* background-color: white; */
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+  }
+
+  #relation_drop {
+    overflow: auto;
+    padding: 0;
+  }
+
+  .box-response {
+    width: 100%;
+    height: 90%;
+  }
+
+  .box-response > p {
+    font-size: 13px;
+  }
+
+  /* .thinkers-sortable ul li img {
+    width: 70px;
+  } */
+
+  .box-relation {
+    height: 150px;
+    padding: 5px;
+    width: max-content;
+  }
+
+  .box-equation {
+    width: max-content;
+  }
+
+  .thinkers-sortable ul li {
+    width: min-content;
+    padding: 10px;
+  }
+
+  .thinkers-sortable ul#relation_drop li p {
+    margin: 10px;
+    width: 100px;
+    font-size: 13px;
+  }
+
+  .box-relation img {
+    width: 100%;
+  }
+
+  div.toggle_sortable {
+    border: 3px dashed #aeb1b8;
+    margin-right: 6px;
+    background-color: #e2e5ec;
+    border-radius: 5px;
+    width: 140px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 150px;
+  }
+
+  .chevron-response-drop {
+    background-color: #e2e5ec;
+    color: white;
+    border: none;
+    padding: 7px;
+  }
+
+  div.toggle_sortable.ui-state-hover {
+    border: 5px dashed #aeb1b8;
+    margin-right: 0px;
+    background-color: #e2e5ec;
+    border-radius: 5px;
+    width: 140px;
+    height: 150px;
+    margin-bottom: 0px;
+    transition: 0.1s;
+  }
+}
+
+@media (max-width: 1240px) and (orientation: landscape) {
+  #response_drop {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+  }
+
+  .response-drag {
+    list-style-type: none;
+    /* background-color: white; */
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+  }
+
+  #relation_drop {
+    overflow: auto;
+    padding: 0;
+  }
+
+  .box-response {
+    width: 90px;
+    height: 140px;
+  }
+
+  .box-response > p {
+    font-size: 13px;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .thinkers-sortable ul li img {
+    width: 100%;
+  }
+
+  .box-relation {
+    height: 140px;
+    padding: 5px;
+    width: 90px;
+  }
+
+  .box-equation {
+    width: max-content;
+  }
+
+  .thinkers-sortable ul li {
+    width: min-content;
+    padding: 10px;
+  }
+
+  .thinkers-sortable ul#relation_drop li p {
+    margin: 0px;
+    width: 70px;
+    font-size: 13px;
+  }
+
+  .box-relation img {
+    width: 100%;
+  }
+
+  div.toggle_sortable {
+    border: 3px dashed #aeb1b8;
+    margin-right: 6px;
+    background-color: #e2e5ec;
+    border-radius: 5px;
+    width: 90px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 140px;
+  }
+  .thinkers-sortable li.left-chevron {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .thinkers-sortable li.right-chevron {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .chevron-response-drop {
+    background-color: #e2e5ec;
+    color: white;
+    border: none;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 568px) and (orientation: landscape) {
+  #response_drop {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+  }
+
+  .response-drag {
+    list-style-type: none;
+    /* background-color: white; */
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+  }
+
+  #relation_drop {
+    overflow: auto;
+    padding: 0;
+  }
+
+  .box-response {
+    width: 80px;
+    height: 120px;
+  }
+
+  .box-response > p {
+    font-size: 13px;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .thinkers-sortable ul li img {
+    width: 100%;
+  }
+
+  .box-relation {
+    height: 120px;
+    padding: 5px;
+    width: 80px;
+  }
+
+  .box-equation {
+    width: max-content;
+  }
+
+  .thinkers-sortable ul li {
+    width: min-content;
+    padding: 10px;
+  }
+
+  .thinkers-sortable ul#relation_drop li p {
+    margin: 0px;
+    width: 70px;
+    font-size: 13px;
+  }
+
+  .box-relation img {
+    width: 100%;
+  }
+
+  div.toggle_sortable {
+    border: 3px dashed #aeb1b8;
+    margin-right: 6px;
+    background-color: #e2e5ec;
+    border-radius: 5px;
+    width: 80px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 120px;
+  }
+  .thinkers-sortable li.left-chevron {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .thinkers-sortable li.right-chevron {
+    display: block;
+    position: absolute;
+    padding: 0px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .chevron-response-drop {
+    background-color: #e2e5ec;
+    color: white;
+    border: none;
+    padding: 7px;
+  }
+
+  div.toggle_sortable.ui-state-hover {
+    border: 5px dashed #aeb1b8;
+    margin-right: 0px;
+    background-color: #e2e5ec;
+    border-radius: 5px;
+    width: 86px;
+    height: 125px;
+    margin-bottom: 0px;
+    transition: 0.1s;
+  }
+}
+
+/* HALAMAN UTAMA */
+.bg-custom {
+  background-image: url('/img/backgroud.jpg');
+  background-size: cover;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:active {
+  cursor: progress;
+}
+
+.btn-custom {
+  color: white;
+  cursor: pointer;
+}
+
+.btn-custom:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* END HALAMAN UTAMA */
