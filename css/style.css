@@ -436,7 +436,7 @@ div.toggle_sortable.ui-state-hover {
 
 /* HALAMAN UTAMA */
 .bg-custom {
-  background-image: url('./../img/backgroud.jpg');
+  background-image: url('https://github.com/ivan0811/edu-game-1/blob/master/img/backgroud.jpg?raw=true');
   background-size: cover;
 }
 
